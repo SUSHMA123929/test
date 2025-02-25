@@ -1,0 +1,61 @@
+<html>
+<head>
+     <title>Simple Calculator</title>
+<script type=text/javascript>
+function showresult(c)
+{
+var n1=parseFloat(document.getElementById('num1').value);
+var n2=parseFloat(document.getElementById('num2').value);
+var r;
+switch(c)
+{
+        case '1':
+                          r=n1+n2;
+                          break;
+        case'2': 
+                         r=n1-n2;
+                         break;
+       case'3':
+                        r=n1*n2;
+                        break;
+        case'4':
+                        r=n1/n2;
+                        break;
+       default:
+                        break;
+
+  
+
+ }
+
+document.getElementById('result').value=r;
+ 
+}
+  </script>
+</head>
+<body bgcolor="lightblue">
+<center>
+<h1 style="color:purple;">Simple Calculator</h1>
+<table border="1" cellpadding="5" cellspacing="5" width="600">
+<tr align="center">
+<td style="color:green;"><b>First numbre</b></td>
+<td style="color:green;"><b>Second numbre</b></td>
+<td style="color:red;"><b>Result</b></td>
+</tr>
+<tr align="center">
+<td><input type="text" size=10 id='num1'/></td>
+<td><input type="text" size=10 id='num2'/></td>
+<td> <input type="text" id='result' size=10 readonly></td>
+</tr>
+<tr>
+<td align="center" colspan="3">
+<button style="color:blue;" onclick="showresult('1')"><b>SUM</b></button>
+<button style="color:blue;" onclick="showresult('2')"><b>DIFFERENCE</b></button>
+<button style="color:blue;" onclick="showresult('3')"><b>PRODUCT</b></button>
+<button style="color:blue;" onclick="showresult('4')"><b>QUOTIENT</b></button>
+</td>
+</tr>
+</table>
+</body>
+</html>
+
